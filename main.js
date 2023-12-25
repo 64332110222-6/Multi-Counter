@@ -32,7 +32,7 @@ function Counter() {
     const btnInc = makeElement('button', 'class', 'btn-inc', '+')
     const number = makeElement('h3', 'class', 'number', '0')
     const btnDec = makeElement('button', 'class', 'btn-dec', '-')
-    const btnClr = makeElement('button', 'class', 'btn-clr', '0')
+    const btnClr = makeElement('button', 'class', 'btn-clr', 'C')
     const btnDel = makeElement('button', 'class', 'btn-del', 'x')
     
     btnInc.addEventListener('click', () => updateCounter(1))
@@ -40,11 +40,11 @@ function Counter() {
     btnClr.addEventListener('click', () => updateCounter(-countNum))
     btnDel.addEventListener('click', delCounter)
 
-    counter.append(btnInc)
     counter.append(btnDec)
+    counter.append(number)
+    counter.append(btnInc)
     counter.append(btnClr)
     counter.append(btnDel)
-    counter.append(number)
 
     return counter
 }
